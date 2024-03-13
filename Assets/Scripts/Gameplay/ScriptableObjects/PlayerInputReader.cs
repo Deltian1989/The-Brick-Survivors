@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using TBS.Gameplay.Input;
 using static TBS.Gameplay.Input.PlayerControls;
 
-namespace TBS.Gameplay.ScriptableObjects.InputReaders
+namespace TBS.Gameplay.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "PlayerInputReader", menuName = "Input/Player Input Reader")]
     public class PlayerInputReader : ScriptableObject, IPlayerMoveActions

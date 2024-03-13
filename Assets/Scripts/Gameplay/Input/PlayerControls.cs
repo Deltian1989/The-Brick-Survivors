@@ -102,7 +102,13 @@ namespace TBS.Gameplay.Input
         {
             ""name"": ""PCControlScheme"",
             ""bindingGroup"": ""PCControlScheme"",
-            ""devices"": []
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
