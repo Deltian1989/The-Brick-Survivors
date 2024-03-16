@@ -40,6 +40,17 @@ namespace TBS.Gameplay.GameplayObjects.Character
             }
         }
 
+        public override void OnNetworkDespawn()
+        {
+            if (IsLocalPlayer)
+            {
+                Destroy(currentPlayerCamera.gameObject);
+
+                playerInputReader.WalkEvent -= OnPlayerWalking;
+                playerInputReader.Disable();
+            }
+        }
+
         private void OnPlayerWalking(Vector2 moveInput)
         {
             m_moveInput = moveInput;
