@@ -559,89 +559,6 @@ Transform:
   - {fileID: 4507621877277444810}
   m_Father: {fileID: 7763674990726242318}
   m_LocalEulerAnglesHint: {x: 65.04776, y: -147.8848, z: -159.40129}
---- !u!1 &6109228227636356434
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8375299775499561010}
-  - component: {fileID: 1181336946083148698}
-  - component: {fileID: 3104647652879781695}
-  m_Layer: 0
-  m_Name: PlayerGizmo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8375299775499561010
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109228227636356434}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.982, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1027318950515573466}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1181336946083148698
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109228227636356434}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3104647652879781695
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109228227636356434}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6134723497871188741
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,8 +570,9 @@ GameObject:
   - component: {fileID: 1027318950515573466}
   - component: {fileID: 1677634924959447539}
   - component: {fileID: 4012796203876229626}
-  - component: {fileID: 3358896114705954238}
-  - component: {fileID: 8814138724774098314}
+  - component: {fileID: 4487028018287953005}
+  - component: {fileID: 8509194342954775375}
+  - component: {fileID: 2442296372845360594}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -677,7 +595,6 @@ Transform:
   m_Children:
   - {fileID: 1327335376692278356}
   - {fileID: 7884741698974411338}
-  - {fileID: 8375299775499561010}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1677634924959447539
@@ -726,7 +643,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &3358896114705954238
+--- !u!114 &4487028018287953005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -735,15 +652,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6134723497871188741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c230238ef1157cf40af490c645d58109, type: 3}
+  m_Script: {fileID: 11500000, guid: e743fa27a9e09d04e806ed264c34f683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlayerCamera: {fileID: 0}
   cameraHolderPrefab: {fileID: 1124756150551750792, guid: 82a950bb5f3123f4a8e3ee76cf949fda,
     type: 3}
-  m_NetworkCharacterMovement: {fileID: 8814138724774098314}
-  playerInputReader: {fileID: 11400000, guid: 8b5bd25d963785246a81f938b3dcffb1, type: 2}
   lookAt: {fileID: 7884741698974411338}
---- !u!114 &8814138724774098314
+--- !u!114 &8509194342954775375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,16 +668,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 6134723497871188741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eb5f59d5fc10dc41bbb7e53e25261cd, type: 3}
+  m_Script: {fileID: 11500000, guid: b09de2f09c9688b4d9fd10abe0f66b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 6
+  pendingJump: 0
+  networkPlayer: {fileID: 4487028018287953005}
+  playerInputReader: {fileID: 11400000, guid: 8b5bd25d963785246a81f938b3dcffb1, type: 2}
+--- !u!114 &2442296372845360594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134723497871188741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92dc3ac548f0d91479fd1d887a9259f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   turnSmoothTime: 0.1
-  positionErrorThreshold: 1
-  gravity: -9
-  characterController: {fileID: 4012796203876229626}
-  m_meshFilter: {fileID: 1181336946083148698}
-  m_Color: {r: 1, g: 0.4117647, b: 0, a: 0.6862745}
+  movementSpeed: 8
+  jumpHeight: 2.5
+  gravityForce: -9.81
+  movement: {x: 0, y: 0, z: 0}
+  gravity: {x: 0, y: 0, z: 0}
 --- !u!1 &6217621832506556952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ClientVisualsAnimator: {fileID: 1235716934918443716}
-  m_NetworkCharacterMovement: {fileID: 8814138724774098314}
+  m_NetworkPlayerProcessor: {fileID: 2442296372845360594}
 --- !u!1 &8064527102888028147
 GameObject:
   m_ObjectHideFlags: 0

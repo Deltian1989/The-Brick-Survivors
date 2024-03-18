@@ -9,7 +9,7 @@ namespace TBS.Gameplay.GameplayObjects.Character
         Animator m_ClientVisualsAnimator;
 
         [SerializeField]
-        NetworkCharacterMovement m_NetworkCharacterMovement;
+        NetworkPlayerProcessor m_NetworkPlayerProcessor;
 
         public Animator OurAnimator => m_ClientVisualsAnimator;
 
@@ -26,7 +26,7 @@ namespace TBS.Gameplay.GameplayObjects.Character
         {
             if (m_ClientVisualsAnimator)
             {
-                OurAnimator.SetBool("isWalking", m_NetworkCharacterMovement.IsMoving);
+                OurAnimator.SetBool("isWalking", m_NetworkPlayerProcessor.IsPlayerMoving);
             }
         }
     }
