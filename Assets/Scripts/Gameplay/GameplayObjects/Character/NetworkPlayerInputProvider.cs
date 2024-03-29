@@ -26,9 +26,12 @@ namespace TBS.Gameplay.GameplayObjects.Character
 
         private void Update()
         {
-            float cameraYAngle = networkPlayer.currentPlayerCamera.Camera.transform.eulerAngles.y;
+            if (networkPlayer.currentPlayerCamera != null)
+            {
+                float cameraYAngle = networkPlayer.currentPlayerCamera.Camera.transform.eulerAngles.y;
 
-            input.cameraYAngle = cameraYAngle;
+                input.cameraYAngle = cameraYAngle;
+            }
         }
 
         private void OnPlayerMoving(Vector2 move)

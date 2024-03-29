@@ -2,7 +2,7 @@
 
 namespace TBS.Network
 {
-    public class NetworkPlayerInputState : INetworkSerializable
+    public struct NetworkPlayerInputState : INetworkSerializable
     {
         public NetworkPlayerInput input;
         public NetworkPlayerState state;

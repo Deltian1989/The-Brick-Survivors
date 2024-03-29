@@ -37,34 +37,6 @@ namespace TBS.Gameplay.GameplayObjects.Character
         // Your player logic happens here
         public NetworkPlayerState Process(NetworkPlayerInput input, TimeSpan deltaTime)
         {
-            //movement = (Vector3.forward * input.forward + Vector3.right * input.right).normalized * movementSpeed * (float)deltaTime.TotalSeconds;
-            //if (controller.isGrounded)
-            //{
-            //    gravity = Vector3.zero;
-            //    if (input.jump)
-            //    {
-            //        gravity = Vector3.up * Mathf.Sqrt(jumpHeight * 2 * -gravityForce) * (float)deltaTime.TotalSeconds;
-            //    }
-            //}
-            //if (gravity.y > 0)
-            //{
-            //    gravity += Vector3.up * gravityForce * Mathf.Pow((float)deltaTime.TotalSeconds, 2);
-            //}
-            //else
-            //{
-            //    gravity += Vector3.up * gravityForce * Mathf.Pow((float)deltaTime.TotalSeconds, 2) * 1.3f;
-            //}
-
-            //Debug.Log(movement + gravity);
-
-            //controller.Move(movement + gravity);
-            //return new NetworkPlayerState()
-            //{
-            //    position = transform.position,
-            //    movement = movement,
-            //    gravity = gravity
-            //};
-
             var movementNormalized = (Vector3.forward * input.forward + Vector3.right * input.right).normalized;
 
             if (controller.isGrounded)

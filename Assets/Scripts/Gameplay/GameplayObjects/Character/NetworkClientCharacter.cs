@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TBS.Gameplay.GameplayObjects.Character
 {
-    public class ClientCharacter : NetworkBehaviour
+    public class NetworkClientCharacter : NetworkBehaviour
     {
         [SerializeField]
         Animator m_ClientVisualsAnimator;
